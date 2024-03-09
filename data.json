@@ -1,0 +1,30 @@
+[
+  {
+    "kecamatan": "Bandung",
+    "koordinat": [-8.1722104, 111.7238797]
+  },
+  {
+    "kecamatan": "Besuki",
+    "koordinat": [-8.2323624, 111.7440996]
+  },
+  {
+    "kecamatan": "Boyolangu",
+    "koordinat": [-8.1069719, 111.8611651]
+  },
+  {
+    "kecamatan": "Campurdarat",
+    "koordinat": [-8.1748529, 111.8214251]
+  },
+  {
+    "kecamatan": "Gondang",
+    "koordinat": [-8.0742279, 111.7865095]
+  },
+  {
+    "kecamatan": "Kalidawir",
+    "koordinat": [-8.2067056, 111.8730378]
+  },
+  {
+    "kecamatan": "Pakel",
+    "koordinat": [-8.1502276, 111.7561553]
+  }
+]
