@@ -29,7 +29,7 @@ def generateImsakiyah(kecamatan: str, koordinat: list):
     print(f"Generating Imsakiyah for: {kecamatan}")
 
     # Open image file
-    img = Image.open("img/awal.png")
+    img = Image.open("img/awal.jpg")
 
     # Get image size
     width, _ = img.size
@@ -77,7 +77,7 @@ def generateImsakiyah(kecamatan: str, koordinat: list):
 
     # Save image
     makedirs("out", exist_ok=True)
-    img.save(f"out/{kecamatan}.png")
+    img.save(f"out/{kecamatan}.jpg")
     img.close()
 
 def generateTwoImsakiyah(tupleKecamatan: tuple):
@@ -87,7 +87,7 @@ def generateTwoImsakiyah(tupleKecamatan: tuple):
     print(f"Generating Imsakiyah for: {namaKecamatan}")
 
     # Open image file
-    img = Image.open("img/awal_2.png")
+    img = Image.open("img/awal_2.jpg")
 
     # Get image size
     width, _ = img.size
@@ -134,7 +134,7 @@ def generateTwoImsakiyah(tupleKecamatan: tuple):
 
     # Save image
     makedirs("out", exist_ok=True)
-    img.save(f"out/{namaKecamatan}.png")
+    img.save(f"out/{namaKecamatan}.jpg")
     img.close()
 
 # Start generating images
