@@ -142,7 +142,7 @@ def generateTwoImsakiyah(tupleKecamatan: tuple):
     img.close()
 
 # Start generating images
-with open("./data.json", "r") as file:
+with open("data/data.json", "r") as file:
     data = json.load(file)
 
 print("Total kecamatan:", len(data))

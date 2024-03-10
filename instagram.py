@@ -11,7 +11,7 @@ USERNAME = os.environ.get("IG_USERNAME")
 PASSWORD = os.environ.get("IG_PASSWORD")
 
 # Caption
-with open("caption.txt", "r") as file:
+with open("data/caption.txt", "r") as file:
     caption = file.read().format(formattedDate)
 
 cl = Client()
