@@ -2,7 +2,7 @@ name: Publish Imsakiyah
 
 on:
   schedule:
-    - cron: "0 19 * * *"
+    - cron: "0 12 * * *" # UTC Time
   workflow_dispatch:
 
 jobs:
