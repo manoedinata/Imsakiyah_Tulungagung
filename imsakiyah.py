@@ -20,13 +20,14 @@ def namaBulan(index, locale = "id_ID"):
 jktZone = ZoneInfo("Asia/Jakarta")
 currentDate = datetime.now(jktZone).date()
 formattedDate = f"{currentDate.day} {namaBulan(currentDate.month)} {currentDate.year}"
-print(formattedDate)
+
+fileCount = 0
 
 def getPrayTimes(coordinates: list, date: date = currentDate):
     return prayTimes.getTimes(date, tuple(coordinates), 7)
 
-def generateImsakiyah(kecamatan: str, koordinat: list):
-    print(f"Generating Imsakiyah for: {kecamatan}")
+def generateImsakiyah(nama: str, koordinat: list, kota: bool = False):
+    print(f"Generating Imsakiyah for: {nama}")
 
     # Open image file
     img = Image.open("img/awal.jpg")
@@ -54,10 +55,10 @@ def generateImsakiyah(kecamatan: str, koordinat: list):
     draw.text((tanggal_size_total, 310), formattedDate, (255,255,255), font=tanggal_font)
 
     # draw.text((604, 297.7), kecamatan, (255,255,255), font=kecamatan_font)
-    kecamatan_font_size = draw.textlength(f"Kecamatan {kecamatan}", kecamatan_font)
+    kecamatan_font_size = draw.textlength(f"{'Kota' if kota else 'Kecamatan'} {nama}", kecamatan_font)
     kecamatan_size_total = (width / 2) - (kecamatan_font_size / 2)
     # draw.text((kecamatan_size_total, 297), f"Kecamatan {kecamatan}", (255,255,255), font=kecamatan_font)
-    draw.text((kecamatan_size_total, 438), f"Kecamatan {kecamatan}", (255,255,255), font=kecamatan_font)
+    draw.text((kecamatan_size_total, 438), f"{'Kota' if kota else 'Kecamatan'} {nama}", (255,255,255), font=kecamatan_font)
 
     # Get prayer times
     times = getPrayTimes(koordinat)
@@ -77,11 +78,11 @@ def generateImsakiyah(kecamatan: str, koordinat: list):
 
     # Save image
     makedirs("out", exist_ok=True)
-    img.save(f"out/{kecamatan}.jpg")
+    img.save(f"out/{fileCount}. {nama}.jpg")
     img.close()
 
 def generateTwoImsakiyah(tupleKecamatan: tuple):
-    listKecamatan = [kecamatan["kecamatan"] for kecamatan in tupleKecamatan]
+    listKecamatan = [kecamatan["nama"] for kecamatan in tupleKecamatan]
     namaKecamatan = " & ".join(listKecamatan)
 
     print(f"Generating Imsakiyah for: {namaKecamatan}")
@@ -112,9 +113,9 @@ def generateTwoImsakiyah(tupleKecamatan: tuple):
         # Draw text
         # draw.text((x, y),"Sample Text",(r,g,b))
         # draw.text((604, 297.7), kecamatan, (255,255,255), font=kecamatan_font)
-        kecamatan_font_size = draw.textlength(f"Kecamatan {kecamatan['kecamatan']}", kecamatan_font)
+        kecamatan_font_size = draw.textlength(f"{'Kota' if kecamatan.get('kota') else 'Kecamatan'} {kecamatan['nama']}", kecamatan_font)
         kecamatan_size_total = (width / 2) - (kecamatan_font_size / 2)
-        draw.text((kecamatan_size_total, 438 + (kecamatan_2_space * i)), f"Kecamatan {kecamatan['kecamatan']}", (255,255,255), font=kecamatan_font)
+        draw.text((kecamatan_size_total, 438 + (kecamatan_2_space * i)), f"{'Kota' if kecamatan.get('kota') else 'Kecamatan'} {kecamatan['nama']}", (255,255,255), font=kecamatan_font)
 
         # Get prayer times
         times = getPrayTimes(kecamatan["koordinat"])
@@ -134,7 +135,7 @@ def generateTwoImsakiyah(tupleKecamatan: tuple):
 
     # Save image
     makedirs("out", exist_ok=True)
-    img.save(f"out/{namaKecamatan}.jpg")
+    img.save(f"out/{fileCount}. {namaKecamatan}.jpg")
     img.close()
 
 # Start generating images
@@ -152,9 +153,11 @@ def grouped(iterable, n):
     return zip(*[iter(iterable)]*n)
 
 for kecamatan in grouped(data, 2):
+    fileCount += 1
     generateTwoImsakiyah(kecamatan)
 
 if len(data) % 2 > 0:
+    fileCount += 1
     # Elemen terakhir dari `grouped()` tidak ikut
     # Panggil `generateImsakiyah()` secara manual untuk 1 kecamatan saja
     generateImsakiyah(**data[-1])

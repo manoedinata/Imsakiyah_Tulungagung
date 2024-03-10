@@ -1,30 +1,79 @@
 [
   {
-    "kecamatan": "Bandung",
-    "koordinat": [-8.1722104, 111.7238797]
+    "nama": "Tulungagung",
+    "koordinat": [-8.1486394, 111.7940131],
+    "kota": true
   },
   {
-    "kecamatan": "Besuki",
-    "koordinat": [-8.2323624, 111.7440996]
-  },
-  {
-    "kecamatan": "Boyolangu",
+    "nama": "Boyolangu",
     "koordinat": [-8.1069719, 111.8611651]
   },
   {
-    "kecamatan": "Campurdarat",
+    "nama": "Kauman",
+    "koordinat": [-8.0399644, 111.8166736]
+  },
+  {
+    "nama": "Kedungwaru",
+    "koordinat": [-8.0385614, 111.8843936]
+  },
+  {
+    "nama": "Ngantru",
+    "koordinat": [-8.0156688, 111.8722922]
+  },
+  {
+    "nama": "Ngunut",
+    "koordinat": [-8.1196674, 111.9622821]
+  },
+  {
+    "nama": "Campurdarat",
     "koordinat": [-8.1748529, 111.8214251]
   },
   {
-    "kecamatan": "Gondang",
+    "nama": "Bandung",
+    "koordinat": [-8.1722104, 111.7238797]
+  },
+  {
+    "nama": "Gondang",
     "koordinat": [-8.0742279, 111.7865095]
   },
   {
-    "kecamatan": "Kalidawir",
+    "nama": "Pakel",
+    "koordinat": [-8.1502276, 111.7561553]
+  },
+  {
+    "nama": "Besuki",
+    "koordinat": [-8.2323624, 111.7440996]
+  },
+  {
+    "nama": "Pagerwojo",
+    "koordinat": [-7.9652619, 111.7091153]
+  },
+  {
+    "nama": "Kalidawir",
     "koordinat": [-8.2067056, 111.8730378]
   },
   {
-    "kecamatan": "Pakel",
-    "koordinat": [-8.1502276, 111.7561553]
+    "nama": "Karangrejo",
+    "koordinat": [-7.9966489, 111.8413146]
+  },
+  {
+    "nama": "Pucanglaban",
+    "koordinat": [-8.239977, 111.9181113]
+  },
+  {
+    "nama": "Rejotangan",
+    "koordinat": [-8.1463104, 112.0241231]
+  },
+  {
+    "nama": "Sendang",
+    "koordinat": [-7.9233224, 111.7517394]
+  },
+  {
+    "nama": "Sumbergempol",
+    "koordinat": [-8.0997024, 111.9115846]
+  },
+  {
+    "nama": "Tanggunggunung",
+    "koordinat": [-8.2315747, 111.8038168]
   }
 ]
