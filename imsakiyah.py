@@ -3,8 +3,11 @@ from PIL import ImageFont
 from PIL import ImageDraw 
 
 from os import makedirs
-from datetime import date, datetime
-from calendar import month_name, different_locale
+from datetime import date
+from datetime import datetime
+from datetime import timedelta
+from calendar import month_name
+from calendar import different_locale
 from zoneinfo import ZoneInfo
 import json
 
@@ -18,7 +21,7 @@ def namaBulan(index, locale = "id_ID"):
         return month_name[index]
 
 jktZone = ZoneInfo("Asia/Jakarta")
-currentDate = datetime.now(jktZone).date()
+currentDate = datetime.now(jktZone).date() + timedelta(days=1)
 formattedDate = f"{currentDate.day} {namaBulan(currentDate.month)} {currentDate.year}"
 
 fileCount = 0
