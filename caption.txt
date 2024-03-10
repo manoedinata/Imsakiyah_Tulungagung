@@ -1,0 +1,29 @@
+[Tanggal: {}]
+
+Jadwal Imsakiyah untuk daerah Tulungagung, selama Ramadhan 1445H / 2024.
+
+🤔 Jadwal Apa Ini?
+
+Ini adalah jadwal Imsakiyah untuk seluruh kecamatan di Kabupaten Tulungagung. Jadwal ini secara otomatis diambil dan diunggah ke akun Instagram @imsakiyah_tulungagung selama bulan Ramadhan 1445H, atau tahun 2024 Masehi.
+
+📍 Dimana patokan dari masing-masing kecamatan?
+
+Koordinat setiap kecamatan (termasuk Kota Tulungagung) diambil dari Google Maps, dengan kata kunci: "Kecamatan xyz, Kabupupaten Tulungagung". Ini berarti koordinat diambil dari titik tengah kecamatan tersebut.
+
+🕒 Kok waktunya berbeda dari aplikasi "x" atau website "y"?
+
+Pengambilan jadwal diambil menggunakan sebuah kode program dengan konfigurasi mengikuti dari https://jadwalsholat.org, serta diberi offset +2 menit sebagai pengaman (Ihtiyati).
+
+Namun, pembuat masih belum dapat memastikan apakah konfigurasi ini sudah sesuai dengan apa yang digunakan oleh kebanyakan orang. Kemungkinan ini adalah konfigurasi yang digunakan oleh Sihat Kemenag RI, namun masih belum jelas.
+
+Hasilnya, jadwal ini kemungkinan memiliki selisih 2-3 menit.
+
+❗ Ini valid nggak?
+
+Seperti yang telah dijelaskan di atas, beberapa jadwal dapat berbeda 2-3 menit dari jadwal yang terdapat pada aplikasi umum. Oleh karena itu, harap gunakan jadwal ini sebagai patokan/referensi saja. Selalu dengarkan adzan sebelum berbuka. 😁
+
+---
+Jadwal Imsakiyah Tulungagung
+by Hendra Manudinata @manoedinata
+
+Source code: https://github.com/manoedinata/Imsakiyah_Tulungagung
